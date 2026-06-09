@@ -478,7 +478,6 @@ section { padding: 7rem 4rem; }
     color: var(--charcoal);
     transition: border-color 0.2s;
     outline: none;
-    -webkit-appearance: none;
 }
 
 .form-group input:focus,

@@ -4,5 +4,5 @@ const precioKyoto = 7
 const precioSiphon = 8
 const precioPrensa = 3
 const maxTazasDia = 50
-
-let tazasReservadasHoy = 0
+const metodos = ["V60", "Kyoto Drip", "Siphon", "Prensa francesa"]
+let tazasReservadasHoy = 1
