@@ -1,0 +1,743 @@
+/* ── Base ── */
+html { 
+    scroll-behavior: smooth; 
+}
+
+body {
+    background: var(--white);
+    color: var(--charcoal);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ── Nav ── */
+nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: rgba(248, 247, 242, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+}
+
+.nav-logo span {
+    display: block;
+    font-size: 0.55rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    color: var(--mint);
+    text-transform: uppercase;
+    margin-top: -2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--mint); }
+
+.nav-cta {
+    background: var(--mint);
+    color: #fff !important;
+    padding: 0.55rem 1.4rem;
+    border-radius: 2px;
+    font-weight: 500 !important;
+    transition: background 0.2s !important;
+}
+
+.nav-cta:hover {
+    background: var(--forest) !important;
+    color: #fff !important;
+}
+
+/* ── Section divider ── */
+.brush-divider {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--mint);
+    margin: 0 auto 2.5rem;
+    border-radius: 2px;
+    position: relative;
+}
+
+.brush-divider::after {
+    content: '';
+    position: absolute;
+    left: 70px; top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 3px;
+    background: var(--mint-light);
+    border-radius: 2px;
+}
+
+/* ── Section shared ── */
+section { padding: 7rem 4rem; }
+
+.section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--mint);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--charcoal);
+    margin-bottom: 1.2rem;
+}
+
+.section-sub {
+    color: var(--gray);
+    max-width: 48ch;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.centered { text-align: center; }
+.centered .section-sub { margin: 0 auto; }
+.container { max-width: 1160px; margin: 0 auto; }
+
+/* ── Hero ── */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-kanji {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(8rem, 18vw, 18rem);
+    color: var(--sand);
+    line-height: 1;
+    user-select: none;
+    letter-spacing: -0.05em;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+}
+
+.hero-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--mint);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--charcoal);
+    margin-bottom: 1.8rem;
+}
+
+.hero-tagline {
+    font-size: 1.1rem;
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 42ch;
+    margin-bottom: 2.8rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--mint);
+    color: #fff;
+    padding: 0.9rem 2.2rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.25s;
+}
+
+.btn-primary:hover { background: var(--forest); }
+
+.btn-ghost {
+    border: 1.5px solid var(--border);
+    color: var(--charcoal);
+    padding: 0.9rem 2.2rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: border-color 0.25s, color 0.25s;
+}
+
+.btn-ghost:hover {
+    border-color: var(--mint);
+    color: var(--mint);
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--mint-pale);
+    border: 1px solid var(--mint-light);
+    border-radius: 100px;
+    padding: 0.4rem 1rem;
+    font-size: 0.78rem;
+    color: var(--forest);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.hero-badge::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: var(--mint);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+}
+
+/* ── About ── */
+#about {
+    background: var(--charcoal);
+    color: var(--white);
+}
+
+#about .section-title { color: var(--white); }
+#about .section-label { color: var(--mint-light); }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    color: rgba(248, 247, 242, 0.72);
+    margin-bottom: 1.2rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.about-text p strong {
+    color: var(--mint-light);
+    font-weight: 500;
+}
+
+.about-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.fact-card {
+    border: 1px solid rgba(123, 175, 142, 0.3);
+    border-radius: 4px;
+    padding: 1.8rem 1.5rem;
+    background: rgba(123, 175, 142, 0.06);
+}
+
+.fact-number {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--mint);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+}
+
+.fact-label {
+    font-size: 0.78rem;
+    color: rgba(248, 247, 242, 0.5);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* ── Menu ── */
+#menu { background: var(--white); }
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+}
+
+.menu-category {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.menu-category-header {
+    background: var(--mint-pale);
+    padding: 1.4rem 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.menu-category-header h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 0.2rem;
+}
+
+.menu-category-header p {
+    font-size: 0.8rem;
+    color: var(--gray);
+    font-weight: 300;
+}
+
+.menu-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.7rem;
+    border-radius: 100px;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+}
+
+.tag-reserva { background: #FFF3E0; color: #E65100; }
+.tag-walkin  { background: var(--mint-pale); color: var(--forest); }
+.tag-cata    { background: #EDE7F6; color: #4527A0; }
+
+.menu-items { padding: 0.5rem 0; }
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.menu-item:last-child { border-bottom: none; }
+
+.menu-item-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--charcoal);
+}
+
+.menu-item-detail {
+    font-size: 0.78rem;
+    color: var(--gray);
+    font-weight: 300;
+    margin-top: 0.15rem;
+}
+
+.menu-item-price {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--mint);
+    white-space: nowrap;
+}
+
+.menu-wide { grid-column: 1 / -1; }
+
+/* ── Reservas ── */
+#reservas { background: var(--sand); }
+
+.reservas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.reservas-info .section-sub { max-width: 100%; }
+
+.rules-list {
+    margin-top: 2rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.rules-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.92rem;
+    color: var(--charcoal);
+}
+
+.rule-dot {
+    width: 8px; height: 8px;
+    background: var(--mint);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.6rem;
+}
+
+.form-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2.5rem;
+}
+
+.form-card h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--charcoal);
+}
+
+.form-group { margin-bottom: 1.3rem; }
+
+.form-group label {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: 2px;
+    background: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: var(--charcoal);
+    transition: border-color 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus { border-color: var(--mint); }
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--mint);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.25s;
+    margin-top: 0.5rem;
+}
+
+.form-submit:hover { background: var(--forest); }
+
+.form-note {
+    font-size: 0.75rem;
+    color: var(--gray);
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+/* ── Cata ── */
+#cata { background: var(--white); }
+
+.cata-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.cata-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3.5rem;
+}
+
+.cata-detail {
+    background: var(--charcoal);
+    border-radius: 4px;
+    padding: 3rem;
+    color: var(--white);
+}
+
+.cata-detail h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.cata-detail-desc {
+    color: rgba(248, 247, 242, 0.6);
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.cata-price {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--mint);
+    line-height: 1;
+    margin: 1.5rem 0 0.3rem;
+}
+
+.cata-price-note {
+    font-size: 0.78rem;
+    color: rgba(248, 247, 242, 0.5);
+    margin-bottom: 2rem;
+}
+
+.cata-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.cata-features li {
+    font-size: 0.88rem;
+    color: rgba(248, 247, 242, 0.75);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.cata-features li::before {
+    content: '✓';
+    color: var(--mint);
+    font-weight: 600;
+}
+
+.cata-info p {
+    color: var(--gray);
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+}
+
+.cupos-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.cupos-visual {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.cupo {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--mint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--mint);
+}
+
+.cupo.disponible { background: var(--mint-pale); }
+
+.cupos-label {
+    font-size: 0.78rem;
+    color: var(--gray);
+    margin-top: 0.5rem;
+}
+
+.cata-action { margin-top: 2rem; }
+
+/* ── Horario ── */
+#horario { background: var(--mint-pale); }
+
+.horario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    max-width: 1160px;
+    margin: 3.5rem auto 0;
+}
+
+.info-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2.2rem;
+}
+
+.info-card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h4 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    color: var(--charcoal);
+}
+
+.info-card p,
+.info-card address {
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.info-card strong {
+    color: var(--charcoal);
+    font-weight: 500;
+}
+
+.schedule-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.schedule-row:last-child { border-bottom: none; }
+.schedule-row span:first-child { color: var(--gray); font-weight: 300; }
+.schedule-row span:last-child { color: var(--mint); font-weight: 500; }
+
+/* ── Footer ── */
+footer {
+    background: var(--charcoal);
+    color: rgba(248, 247, 242, 0.5);
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.footer-logo span {
+    display: block;
+    font-size: 0.6rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    color: var(--mint);
+    text-transform: uppercase;
+}
+
+footer p { font-size: 0.8rem; }
+
+.footer-quote {
+    font-size: 0.75rem;
+    color: rgba(248, 247, 242, 0.3);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 1.5rem; }
+    #hero { padding: 0 1.5rem; min-height: 100svh; }
+    .hero-kanji { font-size: 30vw; right: -2%; opacity: 0.6; }
+    .about-grid, .reservas-grid, .cata-hero { grid-template-columns: 1fr; gap: 2.5rem; }
+    .menu-grid { grid-template-columns: 1fr; }
+    .menu-wide { grid-column: auto; }
+    .horario-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+}

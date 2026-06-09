@@ -1,13 +1,376 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ookini</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ookini — Café de Especialidad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <script src="js/main.js"></script>
+  <!-- ── NAV ── -->
+  <nav>
+    <a class="nav-logo" href="#hero">
+      Ookini
+      <span>おおきに · Café de Especialidad</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Nosotros</a></li>
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#cata">Cata</a></li>
+      <li><a href="#horario">Horario</a></li>
+      <li><a href="#reservas" class="nav-cta">Reservar</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-kanji" aria-hidden="true">おお<br>きに</div>
+    <div class="hero-content">
+      <div class="hero-badge">Abierto hoy · 8 a.m. – 8 p.m.</div>
+      <p class="hero-eyebrow">Café de Especialidad</p>
+      <h1 class="hero-title">Ookini</h1>
+      <p class="hero-tagline">
+        Métodos de filtrado con historia. Desde el Kyoto drip hasta el V60, cada taza es un ritual que merece tiempo y atención.
+      </p>
+      <div class="hero-actions">
+        <a href="#reservas" class="btn-primary">Hacer una reserva</a>
+        <a href="#menu" class="btn-ghost">Ver el menú</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-label">Nuestra historia</span>
+        <h2 class="section-title">Un nombre con raíces en Kioto</h2>
+        <p>
+          <strong>Ookini</strong> (おおきに) significa "gracias" en el dialecto Kansai, la región del Japón donde nació Kioto. Esa misma ciudad dio origen al <strong>Kyoto drip</strong>, uno de los métodos de preparación más lentos y contemplativos que existen.
+        </p>
+        <p>
+          Más que un café, somos un espacio donde el tiempo se ralentiza. Cada preparación especial requiere reserva porque queremos darte el cuidado que merece.
+        </p>
+        <p>
+          Atendemos <strong>todos los días</strong> de 8 a.m. a 8 p.m. y preparamos un máximo de 50 tazas especiales al día, porque la calidad no escala a cualquier precio.
+        </p>
+      </div>
+      <div class="about-facts">
+        <div class="fact-card">
+          <div class="fact-number">50</div>
+          <div class="fact-label">Tazas especiales<br>por día</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-number">3</div>
+          <div class="fact-label">Métodos de<br>preparación</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-number">8</div>
+          <div class="fact-label">Cupos por<br>cata semanal</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-number">12h</div>
+          <div class="fact-label">Abiertos cada<br>día del año</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MENU ── -->
+  <section id="menu">
+    <div class="container">
+      <div class="centered">
+        <span class="section-label">Lo que servimos</span>
+        <h2 class="section-title">El menú</h2>
+        <p class="section-sub">Dos formas de atenderte. Preparaciones con reserva para métodos que piden pausa, y prensa francesa sin espera para cuando la urgencia también merece buen café.</p>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Preparaciones especiales -->
+        <div class="menu-category">
+          <div class="menu-category-header">
+            <span class="menu-tag tag-reserva">Requiere reserva</span>
+            <h3>Preparaciones especiales</h3>
+            <p>Máximo 2 tazas por persona · 50 tazas totales al día</p>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">V60</div>
+                <div class="menu-item-detail">Filtrado en cono, cuerpo limpio y brillante</div>
+              </div>
+              <div class="menu-item-price">$5</div>
+            </div>
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Kyoto Drip</div>
+                <div class="menu-item-detail">Goteo frío lento, 8 a 12 horas de extracción</div>
+              </div>
+              <div class="menu-item-price">$7</div>
+            </div>
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Siphon</div>
+                <div class="menu-item-detail">Vacío y vapor, taza compleja y aromática</div>
+              </div>
+              <div class="menu-item-price">$8</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prensa francesa -->
+        <div class="menu-category">
+          <div class="menu-category-header">
+            <span class="menu-tag tag-walkin">Sin reserva · Walk-in</span>
+            <h3>Prensa Francesa</h3>
+            <p>Sin límite por persona · Disponible hasta el cierre</p>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Prensa Francesa</div>
+                <div class="menu-item-detail">Inmersión clásica, cuerpo rico y texturizado</div>
+              </div>
+              <div class="menu-item-price">$3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cata -->
+        <div class="menu-category menu-wide">
+          <div class="menu-category-header">
+            <span class="menu-tag tag-cata">Evento semanal · Reserva requerida</span>
+            <h3>Cata Semanal</h3>
+            <p>8 cupos por sesión · Incluye múltiples degustaciones guiadas</p>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Experiencia de cata completa</div>
+                <div class="menu-item-detail">Degustación guiada de varios métodos y orígenes. Una vez por semana, cupos limitados.</div>
+              </div>
+              <div class="menu-item-price">$25 / persona</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESERVAS ── -->
+  <section id="reservas">
+    <div class="reservas-grid">
+      <div class="reservas-info">
+        <span class="section-label">Reservaciones</span>
+        <h2 class="section-title">Reserva tu taza</h2>
+        <p class="section-sub">Las preparaciones especiales y la cata semanal requieren reserva. Te asignamos un horario y preparamos todo con anticipación.</p>
+        <ul class="rules-list">
+          <li>
+            <span class="rule-dot"></span>
+            <span>Máximo <strong>2 tazas por persona</strong> en preparaciones especiales por día.</span>
+          </li>
+          <li>
+            <span class="rule-dot"></span>
+            <span>Capacidad total de <strong>50 tazas especiales</strong> al día entre todos los métodos.</span>
+          </li>
+          <li>
+            <span class="rule-dot"></span>
+            <span>La cata semanal tiene <strong>8 cupos</strong>. Se agotan rápido.</span>
+          </li>
+          <li>
+            <span class="rule-dot"></span>
+            <span>La prensa francesa <strong>no necesita reserva</strong>. Llega cuando quieras.</span>
+          </li>
+          <li>
+            <span class="rule-dot"></span>
+            <span>Horario de atención: <strong>todos los días, 8 a.m. – 8 p.m.</strong></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <h3>Formulario de reserva</h3>
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" placeholder="Tu nombre" />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" placeholder="tu@correo.com" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" />
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora preferida</label>
+            <select id="hora">
+              <option value="">Selecciona</option>
+              <option>8:00 a.m.</option>
+              <option>9:00 a.m.</option>
+              <option>10:00 a.m.</option>
+              <option>11:00 a.m.</option>
+              <option>12:00 p.m.</option>
+              <option>1:00 p.m.</option>
+              <option>2:00 p.m.</option>
+              <option>3:00 p.m.</option>
+              <option>4:00 p.m.</option>
+              <option>5:00 p.m.</option>
+              <option>6:00 p.m.</option>
+              <option>7:00 p.m.</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="metodo">Método</label>
+            <select id="metodo">
+              <option value="">Selecciona</option>
+              <option>V60 — $5</option>
+              <option>Kyoto Drip — $7</option>
+              <option>Siphon — $8</option>
+              <option>Cata Semanal — $25</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tazas">N.° de tazas</label>
+            <select id="tazas">
+              <option>1 taza</option>
+              <option>2 tazas</option>
+            </select>
+          </div>
+        </div>
+        <button class="form-submit">Confirmar reserva</button>
+        <p class="form-note">Te contactaremos para confirmar disponibilidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CATA ── -->
+  <section id="cata">
+    <div class="cata-inner">
+      <div class="centered">
+        <span class="section-label">Experiencia guiada</span>
+        <h2 class="section-title">Cata Semanal</h2>
+        <p class="section-sub">Una vez a la semana abrimos 8 cupos para una experiencia de cata guiada. No es solo tomar café; es aprender a escucharlo.</p>
+      </div>
+
+      <div class="cata-hero">
+        <div class="cata-info">
+          <p>Durante la cata recorremos distintos métodos de preparación y orígenes de grano. El barista explica cada paso: la molienda, el agua, el tiempo, el resultado.</p>
+          <p>Es el mejor lugar para empezar si quieres entender por qué dos cafés del mismo origen pueden saber completamente diferente.</p>
+
+          <div>
+            <p class="cupos-title">Cupos disponibles esta semana</p>
+            <div class="cupos-visual">
+              <div class="cupo disponible">1</div>
+              <div class="cupo disponible">2</div>
+              <div class="cupo disponible">3</div>
+              <div class="cupo disponible">4</div>
+              <div class="cupo disponible">5</div>
+              <div class="cupo disponible">6</div>
+              <div class="cupo disponible">7</div>
+              <div class="cupo disponible">8</div>
+            </div>
+            <p class="cupos-label">8 de 8 cupos disponibles · Se renuevan cada semana</p>
+          </div>
+
+          <div class="cata-action">
+            <a href="#reservas" class="btn-primary">Reservar un cupo</a>
+          </div>
+        </div>
+
+        <div class="cata-detail">
+          <h3>Experiencia completa</h3>
+          <p class="cata-detail-desc">Todo incluido, una vez por semana</p>
+          <div class="cata-price">$25</div>
+          <p class="cata-price-note">por persona</p>
+          <ul class="cata-features">
+            <li>Degustación de múltiples métodos</li>
+            <li>Guía a cargo del barista</li>
+            <li>Diferentes orígenes de grano</li>
+            <li>Cupo limitado a 8 personas</li>
+            <li>Requiere reserva previa</li>
+            <li>Todos los días de la semana disponible</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HORARIO ── -->
+  <section id="horario">
+    <div class="container centered">
+      <span class="section-label">Encuéntranos</span>
+      <h2 class="section-title">Horario y contacto</h2>
+      <p class="section-sub">Estamos abiertos todos los días. Sin excepción. Porque el buen café no debería tener días de descanso.</p>
+
+      <div class="horario-grid">
+        <div class="info-card">
+          <div class="info-card-icon">🕗</div>
+          <h4>Horario de atención</h4>
+          <div class="schedule-row">
+            <span>Lunes – Viernes</span>
+            <span>8 a.m. – 8 p.m.</span>
+          </div>
+          <div class="schedule-row">
+            <span>Sábado</span>
+            <span>8 a.m. – 8 p.m.</span>
+          </div>
+          <div class="schedule-row">
+            <span>Domingo</span>
+            <span>8 a.m. – 8 p.m.</span>
+          </div>
+          <div class="schedule-row">
+            <span>Festivos</span>
+            <span>8 a.m. – 8 p.m.</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">📍</div>
+          <h4>Ubicación</h4>
+          <address>
+            Calle del Café 42<br>
+            Barrio La Candelaria<br>
+            Ciudad, País<br><br>
+            A dos cuadras del parque central.<br>
+            Entrada libre, sin consumo mínimo.
+          </address>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">✉️</div>
+          <h4>Contacto</h4>
+          <p>
+            <strong>Email</strong><br>
+            hola@ookini.cafe<br><br>
+            <strong>Instagram</strong><br>
+            @ookini.cafe<br><br>
+            <strong>Teléfono</strong><br>
+            +1 (000) 000-0000
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-logo">
+      Ookini
+      <span>おおきに · Café de Especialidad</span>
+    </div>
+    <p>Todos los días, 8 a.m. – 8 p.m. · Hasta 50 tazas especiales al día.</p>
+    <p class="footer-quote">"Gracias" en Kansai, Japón.</p>
+  </footer>
+
 </body>
 </html>
