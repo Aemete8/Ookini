@@ -44,3 +44,69 @@ function contarVocales(palabra2) {
 }
 
 console.log(contarVocales(palabra2))
+
+// Ejercicio 4 FIZZBUZZ
+
+const numeroRecibido = 15
+
+function fizzBuzz (numeroRecibido) {
+    for (let i = 1; i <= numeroRecibido; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FIZZBUZZ")
+        }   else if (i % 3 === 0) {
+            console.log("FIZZ")
+        } else if (i % 5 === 0){
+            console.log("BUZZ")
+        } else{
+            console.log(i)
+        }
+    }
+}
+
+fizzBuzz(numeroRecibido)
+
+
+// Ejercicio 5 Palindromo
+
+let palabraOriginal = "Anita lava la tina"
+let palindromo = false
+
+
+function esPalindromo (palabraOriginal){
+    const palabraLimpia = palabraOriginal.toLowerCase().split(" ").join("")
+    const palabraInvertida = palabraLimpia.split("").reverse().join("")
+
+    return palabraInvertida === palabraLimpia
+}
+
+
+console.log(esPalindromo(palabraOriginal))
+
+
+// Ejercicio 6 Ookini
+
+const nombreCafe = "Ookini"
+const metodos = ["V60", "Kyoto Drip", "Siphon", "Prensa francesa"]
+const precioV60 = 5
+const precioKyoto = 7
+const precioSiphon = 8
+const precioPrensa = 3
+const maxTazasDia = 50
+const limiteCafePersona = 2
+
+let ventaActual = 1
+let reservaActualPersona = 3
+
+
+function confirmarReserva(ventaActual,reservaActualPersona){
+    if (reservaActualPersona > limiteCafePersona) {
+        console.log("No es posible realizar la reserva, superaste el maximo permitido por persona")
+    } else if (reservaActualPersona + ventaActual > maxTazasDia) {
+        console.log("No es posible realizar la reserva, reserva diaria agotada")
+    } else {
+        console.log("Reserva realizada con éxito")
+    }
+
+}
+
+confirmarReserva(ventaActual,reservaActualPersona)
